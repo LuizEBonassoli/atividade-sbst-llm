@@ -26,6 +26,14 @@
             <version>1.0.6</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.10.1</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -33,16 +41,16 @@
             <plugin>
     <groupId>org.pitest</groupId>
     <artifactId>pitest-maven</artifactId>
-    <version>1.15.0</version>
+    <version>1.4.10</version>
     <configuration>
-        <targetClasses>
-            <param>CalculadoraCusto</param>
-        </targetClasses>
-        <targetTests>
-            <param>CalculadoraCusto_ESTest</param>
-        </targetTests>
+<targetClasses>
+        <param>CalculadoraCusto</param>
+    </targetClasses>
+    <targetTests>
+        <param>*ESTest*</param> </targetTests>
     </configuration>
 </plugin>
         </plugins>
     </build>
 </project>
+
